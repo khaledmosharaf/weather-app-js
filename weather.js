@@ -9,7 +9,7 @@ class City {
 
   async getCity() {
     const response = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=${this.responseLimit}&appid=${this.apiKey}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=${this.responseLimit}&appid=${this.apiKey}`
     )
 
     const responseData = await response.json()
@@ -33,7 +33,7 @@ class Weather {
 
   async getWeather() {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.apiKey}&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=${this.apiKey}&units=metric`
     )
 
     const responseData = await response.json()
